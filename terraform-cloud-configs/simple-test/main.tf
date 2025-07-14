@@ -20,7 +20,6 @@ provider "datadog" {
   # DATADOG_API_KEY and DATADOG_APP_KEY
 }
 
-# Simple test monitor that should definitely create something
 resource "datadog_monitor" "test_monitor" {
   name    = "[sandbox] Test Monitor for Terraform Cloud"
   type    = "metric alert"
