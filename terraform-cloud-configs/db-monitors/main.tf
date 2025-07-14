@@ -10,7 +10,7 @@ terraform {
     organization = "kitman-cloud-test"
     
     workspaces {
-      name = "datadog-us1-sandbox-database-real"
+      name = "datadog-us1-sandbox-db"
     }
   }
 }
