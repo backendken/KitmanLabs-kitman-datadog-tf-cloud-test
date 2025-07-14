@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+
+echo "=== Installing Terragrunt ==="
+# Install Terragrunt
+TERRAGRUNT_VERSION="0.45.0"
+curl -Lo /tmp/terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64
+chmod +x /tmp/terragrunt
+sudo mv /tmp/terragrunt /usr/local/bin/terragrunt
+
+echo "=== Terragrunt installed ==="
+terragrunt --version
+
+echo "=== Running Terragrunt Init ==="
+# Run terragrunt init to generate the terraform files
+terragrunt init
+
+echo "=== Generated Terraform files ==="
+ls -la *.tf
