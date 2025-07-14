@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "YOUR_ORGANIZATION_NAME" # Replace with your org name
+    organization = "kitman-cloud-test"
     
     workspaces {
       tags = ["datadog", "terragrunt"]

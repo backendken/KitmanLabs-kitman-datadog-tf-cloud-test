@@ -7,7 +7,7 @@ remote_state {
   }
   config = {
     hostname     = "app.terraform.io"
-    organization = "YOUR_ORGANIZATION_NAME" # Replace with your org
+    organization = "kitman-cloud-test"
     workspaces = {
       name = "${get_env("TFC_WORKSPACE_NAME", "")}"
     }
